@@ -1,38 +1,165 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  width: 600px;
+  /* border: 2px solid black; */
+}
+
+h1{
+  font-style: italic;
+}
+
+.container{
+  margin: 0 auto;
+  /* border: 2px solid saddlebrown; */
+}
+
+.final-string {
+  display: flex;
+  flex-wrap: wrap; 
+  border: 2px solid rgb(102, 96, 96);
+  border-radius: 5px;
+  min-height: 40px; 
+  overflow-y: auto; 
+  padding: 10px 5px 5px 10px;
+}
+.error{
+  border: 1px solid red;
+}
+
+.error-message{
+  color: red;
+}
+.final-item {
+  position: relative;
+  display: inline-flex; 
+  align-items: center; 
+  background-color: rgb(105, 105, 156);
+  color: white;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin: 8px; 
+  height: 17px;
+}
+
+.final-item p {
+  margin: 0; 
+  padding-right: 5px;
+}
+
+.cancel-button {
+  background-color: rgb(105, 105, 156);
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  padding-left: 8px;
+  width: 15px;
+  border-left: 2px solid white;
+}
+.input-section {
+  width: 600px; 
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid salmon; */
+  /* overflow: hidden;  */
+}
+
+.operands-input {
+  width: 220px;
+  height: 25px;
+}
+.operands-input::placeholder {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 130px;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #e9e9e9;
+}
+
+.calculate-button {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.calculate-button button {
+  background-color: rgb(105, 105, 156);
   color: white;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  padding: 0 20px; /* Adjust padding as needed */
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.reset{
+  margin-right: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculate-button button:hover {
+  background-color: #6a6a9a;
 }
+
+.operators {
+  position: relative; /* Add position relative to contain the dropdown */
+}
+
+.select-operand-button {
+  background-color: rgb(105, 105, 156);
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.operators-grid {
+  position: absolute;
+  top: 100%; /* Position the dropdown below the button */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* Create 4 columns with equal width */
+  gap: 8px; /* Add gap between grid items */
+  padding: 8px; /* Add padding to the grid */
+}
+
+.operator-button {
+  display: block;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center; /* Center text */
+}
+
+.operator-button:hover {
+  background-color: #e9e9e9;
+}
+
+
